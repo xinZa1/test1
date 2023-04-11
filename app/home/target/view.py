@@ -249,7 +249,7 @@ def targetadd(DynamicModel = Target, form = TargetForm):
         savesubdomain(target.subdomain_name, target.id, current_user)
 
         #重新配置定时
-        restart_scheduler()
+        # restart_scheduler()
 
         flash("添加成功")
 
@@ -428,7 +428,7 @@ def targetedit(DynamicModel = Target, DynamicFrom = TargetForm):
         savesubdomain(target.subdomain_name, target.id, current_user)
 
         #重新配置定时
-        restart_scheduler()
+       # restart_scheduler()
 
         flash("修改成功")
 

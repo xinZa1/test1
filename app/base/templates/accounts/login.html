@@ -1,8 +1,8 @@
 {% extends "layouts/base-fullscreen.html" %}
 
-{% block title %} 登录 {% endblock %}
+{% block title %} 资产巡航扫描系统 {% endblock %}
 
-{% block content %}   
+{% block content %}
 
     <div class="auth-wrapper">
         <div class="auth-content">
@@ -14,51 +14,51 @@
             </div>
             <div class="card">
                 <div class="card-body text-center">
-                    <div class="mb-4">
-                        <i class="feather icon-unlock auth-icon"></i>
-                    </div>
-                    <h3 class="mb-4">登录</h3>
+{#                    <div class="mb-4">#}
+{#                        <i class="feather icon-unlock auth-icon"></i>#}
+{#                    </div>#}
+                    <h3 class="mb-4">资产巡航扫描系统</h3>
 
                     <span class="mb-0 text-muted">
                         {% if msg %}
                             {{ msg | safe }}
                         {% else %}
                             请输入账号密码
-                        {% endif %} 
+                        {% endif %}
                     </span>
 
                     <br />
                     <br />
-                    
+
                     <form role="form" method="post" action="">
 
-                        {{ form.hidden_tag() }}                    
+                        {{ form.hidden_tag() }}
 
                         <div class="input-group mb-3">
                             {{ form.username(placeholder="Username", class="form-control") }}
                         </div>
-                        
+
                         <div class="input-group mb-4">
                             {{ form.password(placeholder="Password", class="form-control", type="password") }}
                         </div>
-                        
+{#                        它创建了一个带有标签的复选框。标签上写着“保存凭证”，表示这是一个用于保存凭证的复选框。该复选框默认为选中状态，其ID为“checkbox-fill-a1”#}
                         <div class="form-group text-left">
                             <div class="checkbox checkbox-fill d-inline">
                                 <input type="checkbox" name="checkbox-fill-1" id="checkbox-fill-a1" checked="">
-                                <label for="checkbox-fill-a1" class="cr"> 保存凭证</label>
+                                <label for="checkbox-fill-a1" class="cr"> 保存 </label>
                             </div>
                         </div>
+
                         <button type="submit" name="login" class="btn btn-primary shadow-2 mb-4">登录</button>
 
                     </form>
 
-                    
-                    <br />
-                    <p class="mb-2 text-muted">
-                        &copy; 项目地址
-                        - <a target="_blank" 
-                             href="https://github.com/SiJiDo/H">https://github.com/SiJiDo/H</a>
-                    </p>
+{#                    <br />#}
+{#                    <p class="mb-2 text-muted">#}
+{#                        &copy; 项目地址#}
+{#                        - <a target="_blank" #}
+{#                             href="https://github.com/SiJiDo/H">https://github.com/SiJiDo/H</a>#}
+{#                    </p>#}
                 </div>
             </div>
         </div>

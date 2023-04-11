@@ -46,7 +46,7 @@ def startscan():
     db.session.commit()
 
     # return redirect(url_for('home_blueprint.targetinforoute',id=id,message="开始扫描, 扫描进程为----" + str(p.pid)))
-    return redirect(url_for('target'))
+    return target()
 #暂停扫描
 def stopscan():
     id = request.args.get('id')
@@ -71,10 +71,10 @@ def stopscan():
     except Exception as e:
         print(e)
         # return redirect(url_for('home_blueprint.targetinforoute',id=id,message="内部错误"))
-        return redirect(url_for('target'))
+        return target()
 
     # return redirect(url_for('home_blueprint.targetinforoute',id=id,message="停止扫描, 扫描进程为----" + str(pid)))
-    return redirect(url_for('target'))
+    return target()
 #开始扫描
 def webhook():
     vuln = request.json
