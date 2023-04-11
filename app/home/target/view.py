@@ -11,8 +11,9 @@ from flask import render_template, request, send_from_directory
 from app.home.scanconfig.models import *
 from app import db
 from app.home.target.form import *
+from app.home.target.models import Target
 from flask_login import current_user
-from app.schedulertasks.controller import restart_scheduler
+#from app.schedulertasks.controller import restart_scheduler
 import math
 import time
 
@@ -242,7 +243,7 @@ def targetadd(DynamicModel = Target, form = TargetForm):
         db.session.add(target)
         db.session.commit()
         #设置blacklist的其他属性
-        saveblacklist(target.black_name, target.id)
+        # saveblacklist(target.black_name, target.id)
         #设置domain的其他属性
         savedomain(target.domain_name, target.id, current_user)
         #设置subdomain的其他属性
@@ -321,12 +322,12 @@ def targetinfo(DynamicModel = Target, DynamicFrom = TargetForm):
             dic['port_count'] = Port.query.filter(Port.port_target == id, Port.port_domain.like('%.{}'.format(dic['domain_name']))).count()
             domain_content.append(dic)
     blacklist_content = []
-    if(blacklist_total_count > 0):
-        for q in query_blacklist.items:
-            dic = queryToDict(q)
-            dic['blacklist_type'] = dic['black_name'].split(":")[0]
-            dic['blacklist_name'] = dic['black_name'].split(":")[1]
-            blacklist_content.append(dic)
+    # if(blacklist_total_count > 0):
+    #     for q in query_blacklist.items:
+    #         dic = queryToDict(q)
+    #         dic['blacklist_type'] = dic['black_name'].split(":")[0]
+    #         dic['blacklist_name'] = dic['black_name'].split(":")[1]
+    #         blacklist_content.append(dic)
 
     vuln_count = Vuln.query.filter(Vuln.vuln_target == id).count()
     web_count = Http.query.filter(Http.http_target == id).count()
@@ -421,7 +422,7 @@ def targetedit(DynamicModel = Target, DynamicFrom = TargetForm):
         db.session.query(DynamicModel).filter(DynamicModel.id == id).update(dic)
         db.session.commit()
         #设置blacklist的其他属性
-        saveblacklist(target.black_name, target.id)
+        # saveblacklist(target.black_name, target.id)
         #设置domain的其他属性
         savedomain(target.domain_name, target.id, current_user)
         #设置subdomain的其他属性

@@ -13,6 +13,7 @@ from app.home.target.form import *
 from app.home.target.function import *
 from app.home.target.models import *
 from app.home.target.view import *
+from app.home.target.models import Target
 from celery import Celery
 from flask import request, redirect, url_for
 from flask_login import current_user
@@ -46,7 +47,7 @@ def startscan():
     db.session.commit()
 
     # return redirect(url_for('home_blueprint.targetinforoute',id=id,message="开始扫描, 扫描进程为----" + str(p.pid)))
-    return target()
+    return target(DynamicModel = Target)
 #暂停扫描
 def stopscan():
     id = request.args.get('id')
@@ -71,10 +72,10 @@ def stopscan():
     except Exception as e:
         print(e)
         # return redirect(url_for('home_blueprint.targetinforoute',id=id,message="内部错误"))
-        return target()
+        return target(DynamicModel = Target)
 
     # return redirect(url_for('home_blueprint.targetinforoute',id=id,message="停止扫描, 扫描进程为----" + str(pid)))
-    return target()
+    return target(DynamicModel = Target)
 #开始扫描
 def webhook():
     vuln = request.json
