@@ -14,8 +14,8 @@ RUN apt-get install -y vim python3 python3-pip nmap language-pack-zh-hans fontco
 RUN chmod +x /tmp/init.sh
 RUN chmod -R +x /app/
 
-RUN cd /tmp \
-    && wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
-    && apt install -y ./google-chrome-stable_current_amd64.deb
+#RUN cd /tmp \
+#    && wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
+#    && apt install -y ./google-chrome-stable_current_amd64.deb
 
 CMD ["/tmp/init.sh"]
