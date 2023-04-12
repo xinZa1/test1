@@ -439,4 +439,4 @@ def targetedit(DynamicModel = Target, DynamicFrom = TargetForm):
 def export():
     id = request.args.get('id')
     output_excel(id)
-    return send_from_directory(r"/tmp",filename="h_output.xls",as_attachment=True)
+    return send_from_directory(r"/tmp",filename="扫描结果.xls",as_attachment=True)

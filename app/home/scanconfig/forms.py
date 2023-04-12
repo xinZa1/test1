@@ -9,21 +9,21 @@ from wtforms.validators import  DataRequired
 import time
 
 #对年月日进行预设
-list_min = []
+list_min = [('-','-')]
 for i in range(0, 60):
     list_min.append((str(i),str(i)))
-list_hour = [('*','*')]
+list_hour = [('-','-')]
 for i in range(0,24):
     list_hour.append((str(i),str(i)))
-list_day = [('*','*')]
+list_day = [('-','-')]
 for i in range(1,32):
     list_day.append((str(i),str(i)))
 
-list_day_of_week = [('*','*')]
+list_day_of_week = [('-','-')]
 for i in range(1,8):
     list_day_of_week.append((str(i),str(i)))
 
-list_month = [('*','*')]
+list_month = [('-','-')]
 for i in range(1,13):
     list_month.append((str(i),str(i)))
 

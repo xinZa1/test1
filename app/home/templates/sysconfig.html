@@ -39,25 +39,25 @@
                         <div class="card">
                             
                             <div class="card-body">
-                                <h5>扫描模式设置</h5><hr/>
+                                <h5>设置</h5><hr/>
                                 <div class="row">
                                     <div class="col-md-3"></div>
                                     <div class="col-sm-6">
                                         <form method="POST">  
+{#                                            <div>#}
+{#                                                <label><h6>基本配置: </h6></label><br>#}
+{#                                            </div>#}
+{#                                            <div class="form-group">#}
+{#                                                <label>同时扫描任务上限</label>#}
+{#                                                {{form.config_count(class="form-control")}}#}
+{#                                            </div>#}
+{#                                            <div class="form-group">#}
+{#                                                <label>{{form.config_vuln_github.label}}</label> #}
+{#                                                {{form.config_vuln_github(class="form-control")}}#}
+{#                                            </div>#}
+{#                                            <hr/>#}
                                             <div>
-                                                <label><h6>基本配置: </h6></label><br>
-                                            </div>
-                                            <div class="form-group">
-                                                <label>同时扫描任务上限</label>
-                                                {{form.config_count(class="form-control")}}
-                                            </div>
-                                            <div class="form-group">
-                                                <label>{{form.config_vuln_github.label}}</label> 
-                                                {{form.config_vuln_github(class="form-control")}}
-                                            </div>
-                                            <hr/>
-                                            <div>
-                                                <label><h6>信息推送配置: </h6></label><br>
+                                                <label><h6>信息推送配置 </h6></label><br>
                                             </div>
                                             <div class="form-group">
                                                 <label>{{form.config_email_username.label}}</label> 
@@ -74,7 +74,7 @@
                                             <div class="form-group">
                                                 <label>{{form.config_email_get.label}}</label> 
                                                 {{form.config_email_get(class="form-control",style="resize:none;", rows="4",placeholder="")}}
-                                                <small id="scanmethod_port_dfportlist" class="form-text text-muted">接受推送邮箱账号一行一个</small>
+                                                <small id="scanmethod_port_dfportlist" class="form-text text-muted"></small>
                                             </div>
 {#                                            <div class="form-group">#}
 {#                                                <label>{{form.config_push_hour.label}}</label> #}
@@ -102,18 +102,18 @@
                                             <div>
                                                 <label><h6>实时推送内容选择: </h6></label><br>
                                             </div>
-{#                                            <div class="custom-control custom-checkbox custom-control-inline">  #}
-{#                                                {{form.config_vuln(class="custom-control-input",id="config_vuln")}}#}
-{#                                                <label class="custom-control-label" for="config_vuln" >{{form.config_vuln.label}}</label>#}
-{#                                            </div>#}
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                {{form.config_vuln(class="custom-control-input",id="config_vuln")}}
+                                                <label class="custom-control-label" for="config_vuln" >{{form.config_vuln.label}}</label>
+                                            </div>
 {#                                            <div class="custom-control custom-checkbox custom-control-inline">  #}
 {#                                                {{form.config_xray(class="custom-control-input",id="config_xray")}}#}
 {#                                                <label class="custom-control-label" for="config_xray" >{{form.config_xray.label}}</label>#}
 {#                                            </div>#}
-                                            <div class="custom-control custom-checkbox custom-control-inline">  
-                                                {{form.config_vuln_my(class="custom-control-input",id="config_vuln_my")}}
-                                                <label class="custom-control-label" for="config_vuln_my" >{{form.config_vuln_my.label}}</label>
-                                            </div>
+{#                                            <div class="custom-control custom-checkbox custom-control-inline">  #}
+{#                                                {{form.config_vuln_my(class="custom-control-input",id="config_vuln_my")}}#}
+{#                                                <label class="custom-control-label" for="config_vuln_my" >{{form.config_vuln_my.label}}</label>#}
+{#                                            </div>#}
 
                                             
                                             <br>

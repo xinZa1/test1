@@ -5395,7 +5395,8 @@ body.layout-6 .pcoded-navbar.mob-open ~ .pcoded-header:before,
 body.layout-6 .pcoded-navbar.mob-open ~ .pcoded-main-container:before,
 body.layout-6 .pcoded-navbar.navbar-collapsed:hover ~ .pcoded-header:before,
 body.layout-6 .pcoded-navbar.navbar-collapsed:hover ~ .pcoded-main-container:before {
-  background: transparent;
+  /*background: transparent;*/
+  background: black;
 }
 body.layout-6 .pcoded-navbar.menupos-static .navbar-wrapper,
 body.layout-6 .pcoded-navbar.menupos-static .scroll-div.navbar-content {

@@ -243,18 +243,18 @@ def ip_addr(id):
 #导出Excel
 def output_excel(target_id):
     style = xlwt.easyxf('font: bold on')
-    output_file = "/tmp/h_output.xls"
+    output_file = "/tmp/扫描结果.xls"
     workbook = xlwt.Workbook()
-    sheet_doamin = workbook.add_sheet('主域名',cell_overwrite_ok=True)
+    # sheet_doamin = workbook.add_sheet('主域名',cell_overwrite_ok=True)
     sheet_subdoamin = workbook.add_sheet('子域名',cell_overwrite_ok=True)
     sheet_port = workbook.add_sheet('端口',cell_overwrite_ok=True)
     sheet_url = workbook.add_sheet('站点',cell_overwrite_ok=True)
     sheet_dirb = workbook.add_sheet('目录',cell_overwrite_ok=True)
     sheet_vuln = workbook.add_sheet('漏洞',cell_overwrite_ok=True)
-    sheet_doamin.write(0,0,'主域名',style)
-    sheet_doamin.col(1).width = 256 * 15
-    sheet_doamin.write(0,1,'采集时间',style)
-    sheet_doamin.col(1).width = 256 * 20
+    # sheet_doamin.write(0,0,'主域名',style)
+    # sheet_doamin.col(1).width = 256 * 15
+    # sheet_doamin.write(0,1,'采集时间',style)
+    # sheet_doamin.col(1).width = 256 * 20
     sheet_subdoamin.write(0,0,'子域名',style)
     sheet_subdoamin.col(0).width = 256 * 35
     sheet_subdoamin.write(0,1,'ip',style)
@@ -303,11 +303,11 @@ def output_excel(target_id):
     sheet_vuln.write(0,3,'采集时间',style)
     sheet_vuln.col(3).width = 256 * 20
     
-    row = 1
-    for domain_info in Domain.query.filter(Domain.domain_target == target_id).all():
-        sheet_doamin.write(row,0,domain_info.domain_name)
-        sheet_doamin.write(row,1,domain_info.domain_time)
-        row = row + 1
+    # row = 1
+    # for domain_info in Domain.query.filter(Domain.domain_target == target_id).all():
+    #     sheet_doamin.write(row,0,domain_info.domain_name)
+    #     sheet_doamin.write(row,1,domain_info.domain_time)
+    #     row = row + 1
     row = 1
     for subdomain_info in Subdomain.query.filter(Subdomain.subdomain_target == target_id).all():
         sheet_subdoamin.write(row,0,subdomain_info.subdomain_name)

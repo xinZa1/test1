@@ -50,7 +50,7 @@
                                         <div class="col-md-8 form-inline">
                                             <div class="row">
                                                 <div class="col-md-7">
-                                                    <input type="text" class="form-control" style="width: 550px; height: 55px;" name="search" placeholder="url=路径 / title=标题 / status=响应 / finger=指纹" />
+                                                    <input type="text" class="form-control" style="width: 550px; height: 55px;" name="search" placeholder="url=路径 / finger=指纹" />
                                                 </div>
                                                 <div class="col-md-5">
                                                     <input type="submit" class="theme-bg btn text-white f-12" style="width: 85px; height: 55px; line-height: 10px; border:1px; float: right;" value="搜索" />
@@ -66,9 +66,9 @@
                                                 <th>项目</th>
 {#                                                <th>新增资产</th>#}
                                                 <th>web</th>
-                                                <th>标题</th>
+{#                                                <th>标题</th>#}
                                                 <th>长度</th>
-                                                <th>响应</th>
+{#                                                <th>响应</th>#}
                                                 <th>指纹</th>
 {#                                                <th>操作</th>#}
                                             </tr>
@@ -79,9 +79,9 @@
                                                 <td style="vertical-align: middle !important;text-align: center;">{{row.target_name}}</td>
                                                 <td style="vertical-align: middle !important;text-align: center;"><a href=javascript:window.open("{{row.http_schema}}://{{row.http_name}}")>{{row.http_schema}}://{{row.http_name}}</a></td>
 {#                                                <td style="vertical-align: middle !important;text-align: center;"><label class="label theme-bg text-white f-10 f-w-50">标题:{{row.http_title}}</label><br><label class="label theme-bg text-white f-10 f-w-50">长度:{{row.http_length}}</label><br><label class="label theme-bg text-white f-10 f-w-50">响应码:{{row.http_status}}</label><br><label class="label theme-bg text-white f-10 f-w-50">指纹:{{row.http_finger}}</label></td>#}
-                                                <td style="vertical-align: middle !important;text-align: center;">{{row.http_title}}</td>
+{#                                                <td style="vertical-align: middle !important;text-align: center;">{{row.http_title}}</td>#}
                                                 <td style="vertical-align: middle !important;text-align: center;">{{row.http_length}}</td>
-                                                <td style="vertical-align: middle !important;text-align: center;">{{row.http_status}}</td>
+{#                                                <td style="vertical-align: middle !important;text-align: center;">{{row.http_status}}</td>#}
                                                 <td style="vertical-align: middle !important;text-align: center;">{{row.http_finger}}</td>
 {#                                                <td style="vertical-align: middle !important;text-align: center;">{{row.dirb_count}}</td>#}
 {#                                                <td style="vertical-align: middle !important;text-align: center;">{{row.vuln_count}}</td>#}
