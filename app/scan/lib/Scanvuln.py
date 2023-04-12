@@ -274,7 +274,7 @@ def save_result(target, target_id, vuln_result, cursor, conn, current_user):
                 cursor.execute(sql)
                 conn.commit()
                 #邮件实时通知
-                if(result['vuln_level'] != 'low'):
+                if(result['vuln_level'] != ''):
                     Sendemail(isdaliy=False, tool=tool, url=result['vuln_target'], info=result['vuln_info'], poc=result['vuln_poc'], level=result['vuln_level'],scantime=time.strftime('%Y-%m-%d  %H:%M:%S', time.localtime(time.time())) )
 
             except Exception as e:

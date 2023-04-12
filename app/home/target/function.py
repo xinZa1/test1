@@ -257,11 +257,11 @@ def output_excel(target_id):
     # sheet_doamin.col(1).width = 256 * 20
     sheet_subdoamin.write(0,0,'子域名',style)
     sheet_subdoamin.col(0).width = 256 * 35
-    sheet_subdoamin.write(0,1,'ip',style)
-    sheet_subdoamin.col(1).width = 256 * 50
-    sheet_subdoamin.write(0,2,'解析',style)
-    sheet_subdoamin.col(2).width = 256 * 10
-    sheet_subdoamin.write(0,3,'采集时间',style)
+    # sheet_subdoamin.write(0,1,'ip',style)
+    # sheet_subdoamin.col(1).width = 256 * 50
+    # sheet_subdoamin.write(0,2,'解析',style)
+    # sheet_subdoamin.col(2).width = 256 * 10
+    sheet_subdoamin.write(0,3,'时间',style)
     sheet_subdoamin.col(3).width = 256 * 20
     sheet_port.write(0,0,'域名',style)
     sheet_port.col(0).width = 256 * 35
@@ -271,36 +271,36 @@ def output_excel(target_id):
     sheet_port.col(2).width = 256 * 10
     sheet_port.write(0,3,'服务',style)
     sheet_port.col(3).width = 256 * 15
-    sheet_port.write(0,4,'采集时间',style)
+    sheet_port.write(0,4,'时间',style)
     sheet_port.col(4).width = 256 * 20
-    sheet_url.write(0,0,'目标',style)
+    sheet_url.write(0,0,'web',style)
     sheet_url.col(0).width = 256 * 60
-    sheet_url.write(0,1,'标题',style)
-    sheet_url.col(1).width = 256 * 30
-    sheet_url.write(0,2,'响应码',style)
-    sheet_url.col(2).width = 256 * 10
+    # sheet_url.write(0,1,'标题',style)
+    # sheet_url.col(1).width = 256 * 30
+    # sheet_url.write(0,2,'响应码',style)
+    # sheet_url.col(2).width = 256 * 10
     sheet_url.write(0,3,'长度',style)
     sheet_url.col(3).width = 256 * 10
     sheet_url.write(0,4,'指纹',style)
     sheet_url.col(4).width = 256 * 30
-    sheet_url.write(0,5,'采集时间',style)
+    sheet_url.write(0,5,'时间',style)
     sheet_url.col(5).width = 256 * 20
     sheet_dirb.write(0,0,'目标',style)
     sheet_dirb.col(0).width = 256 * 60
-    sheet_dirb.write(0,1,'标题',style)
-    sheet_dirb.col(1).width = 256 * 30
-    sheet_dirb.write(0,2,'响应码',style)
+    # sheet_dirb.write(0,1,'标题',style)
+    # sheet_dirb.col(1).width = 256 * 30
+    sheet_dirb.write(0,2,'响应',style)
     sheet_dirb.col(2).width = 256 * 10
-    sheet_dirb.write(0,3,'长度',style)
-    sheet_dirb.col(3).width = 256 * 10
-    sheet_dirb.write(0,4,'采集时间',style)
+    # sheet_dirb.write(0,3,'长度',style)
+    # sheet_dirb.col(3).width = 256 * 10
+    sheet_dirb.write(0,4,'时间',style)
     sheet_dirb.col(4).width = 256 * 20
     sheet_vuln.write(0,0,'漏洞等级',style)
     sheet_vuln.write(0,1,'漏洞名',style)
     sheet_vuln.col(1).width = 256 * 30
     sheet_vuln.write(0,2,'漏洞POC',style)
     sheet_vuln.col(2).width = 256 * 60
-    sheet_vuln.write(0,3,'采集时间',style)
+    sheet_vuln.write(0,3,'时间',style)
     sheet_vuln.col(3).width = 256 * 20
     
     # row = 1

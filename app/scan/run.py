@@ -39,10 +39,11 @@ def startscan():
 
     if(db.session.query(Celerytask).filter(Celerytask.celery_target == id).count() == 0):
         celerytask.celery_target = id
-        celerytask.celery_status = True
+        # celerytask.celery_status = True
+        celerytask.celery_id = True
         db.session.add(celerytask)
     else:
-        db.session.query(Celerytask).filter(Celerytask.celery_target == id).update({'celery_status': True})
+        db.session.query(Celerytask).filter(Celerytask.celery_target == id).update({'celery_id': True})
 
     db.session.commit()
 
@@ -60,6 +61,7 @@ def stopscan():
     task.conf.update(CELERY_TASK_SERIALIZER = 'json',CELERY_RESULT_SERIALIZER = 'json',CELERY_ACCEPT_CONTENT=['json'],CELERY_TIMEZONE = 'Asia/Shanghai',CELERY_ENABLE_UTC = False,)
     for r in result:
         task.control.revoke(r.celery_id, terminate=True)
+        task.control.revoke(r.celery_target, terminate=True)
     
     [db.session.delete(r) for r in result]
     db.session.query(Target).filter(Target.id == id).update({'target_pid':0})

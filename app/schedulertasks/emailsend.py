@@ -94,7 +94,7 @@ def Sendemail(isdaliy=True, tool="", url="", info="", poc="", level="",scantime=
                     )
 
     message = MIMEText(mail_msg, 'html', 'utf-8')
-    subject = 'H资产收集器通知'
+    subject = '来自资产巡航扫描系统!!!'
     message['Subject'] = Header(subject, 'utf-8')
 
     cursor.close()
