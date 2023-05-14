@@ -311,8 +311,8 @@ def output_excel(target_id):
     row = 1
     for subdomain_info in Subdomain.query.filter(Subdomain.subdomain_target == target_id).all():
         sheet_subdoamin.write(row,0,subdomain_info.subdomain_name)
-        sheet_subdoamin.write(row,1,subdomain_info.subdomain_ip)
-        sheet_subdoamin.write(row,2,subdomain_info.subdomain_info)
+        # sheet_subdoamin.write(row,1,subdomain_info.subdomain_ip)
+        # sheet_subdoamin.write(row,2,subdomain_info.subdomain_info)
         sheet_subdoamin.write(row,3,subdomain_info.subdomain_time)
         row = row + 1
     row = 1
@@ -326,8 +326,8 @@ def output_excel(target_id):
     row = 1
     for url_info in Http.query.filter(Http.http_target == target_id).all():
         sheet_url.write(row,0,url_info.http_schema + "://" + url_info.http_name)
-        sheet_url.write(row,1,url_info.http_title)
-        sheet_url.write(row,2,url_info.http_status)
+        # sheet_url.write(row,1,url_info.http_title)
+        # sheet_url.write(row,2,url_info.http_status)
         sheet_url.write(row,3,url_info.http_length)
         sheet_url.write(row,4,url_info.http_finger)
         sheet_url.write(row,5,url_info.http_time)
@@ -335,9 +335,9 @@ def output_excel(target_id):
     row = 1
     for dirb_info in Dirb.query.filter(Dirb.dir_target == target_id).all():
         sheet_dirb.write(row,0,dirb_info.dir_base)
-        sheet_dirb.write(row,1,dirb_info.dir_title)
+        # sheet_dirb.write(row,1,dirb_info.dir_title)
         sheet_dirb.write(row,2,dirb_info.dir_status)
-        sheet_dirb.write(row,3,dirb_info.dir_length)
+        # sheet_dirb.write(row,3,dirb_info.dir_length)
         sheet_dirb.write(row,4,dirb_info.dir_time)
         row = row + 1
     row = 1

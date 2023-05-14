@@ -81,11 +81,9 @@ def Sendemail(isdaliy=True, tool="", url="", info="", poc="", level="",scantime=
         
     else:
         mail_msg = """
-        <p>通知 - 漏洞通知！！！</p>
-        <p>{} 发现新漏洞:</p>
         <table border="1"><tr><th>漏洞站点</th><th>信息</th><th>poc</th><th>危害</th><th>发现时间</th></tr>
         <tr><td>{}</td><td>{}</td><td>{}</td><td>{}</td><td>{}</td></tr></table>
-        """.format(tool,
+        """.format(
                 url,
                 info,
                 poc,
@@ -94,8 +92,9 @@ def Sendemail(isdaliy=True, tool="", url="", info="", poc="", level="",scantime=
                     )
 
     message = MIMEText(mail_msg, 'html', 'utf-8')
-    subject = '来自资产巡航扫描系统!!!'
+    subject = '滴滴滴!漏洞推送通知!'
     message['Subject'] = Header(subject, 'utf-8')
+    message['From'] = smtp_user
 
     cursor.close()
     conn.close()

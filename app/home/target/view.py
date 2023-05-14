@@ -13,7 +13,7 @@ from app import db
 from app.home.target.form import *
 from app.home.target.models import Target
 from flask_login import current_user
-#from app.schedulertasks.controller import restart_scheduler
+from app.schedulertasks.controller import restart_scheduler
 import math
 import time
 
@@ -210,6 +210,7 @@ def target(DynamicModel = Target):
 #target添加
 def targetadd(DynamicModel = Target, form = TargetForm):
     form = TargetForm()
+    #首先判断 Scanmethod 和 Scancron 两张数据表中是否有数据，如果有则查询所有数据并转换为字典格式，然后组成 (id, name) 对的列表
 
     #定义扫描模式下拉框
     if(Scanmethod.query.count()):
@@ -250,7 +251,7 @@ def targetadd(DynamicModel = Target, form = TargetForm):
         savesubdomain(target.subdomain_name, target.id, current_user)
 
         #重新配置定时
-        # restart_scheduler()
+        restart_scheduler()
 
         flash("添加成功")
 

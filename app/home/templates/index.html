@@ -25,7 +25,7 @@
 {#                                            <i class="feather icon-crosshair text-c-green f-36"></i>#}
 {#                                        </div>#}
                                         <div class="col text-left">
-                                            <h3>子域总数:{{form.subdomain_total_count}}</h3>
+                                            <h3>子域名总数:{{form.subdomain_total_count}}</h3>
 {#                                            <h5 class="text-c-green mb-0">+{{form.subdomain_rate}}% <span class="text-muted">近期扫描新增</span></h5>#}
                                         </div>
                                     </div>
@@ -56,7 +56,7 @@
 {#                                            <i class="feather icon-airplay text-c-blue f-36"></i>#}
 {#                                        </div>#}
                                         <div class="col text-left">
-                                            <h3>web总数:{{form.http_total_count}}</h3>
+                                            <h3>web存活总数:{{form.http_total_count}}</h3>
 {#                                            <h5 class="text-c-purple mb-0">+{{form.http_rate}}% <span class="text-muted">近期扫描新增</span></h5>#}
                                         </div>
                                     </div>
@@ -113,36 +113,36 @@
                         <!--[social-media section] end-->
 
                         <!--[ Recent Users ] start-->
-                        <div class="col-xl-4 col-md-5">
-                            <div class="card Recent-Users">
-                                <div class="card-header">
-                                    <h5>celery监控状态</h5>
-                                </div>
-                                <div class="card-block px-0 py-0">
-                                    <div class="table-responsive">
-                                        <table class="table table-hover">
-                                            <tbody>
-                                                {% for row in form.celery_result %}
-                                                <tr class="unread">
-                                                    <td style="vertical-align: middle !important;text-align: center;">
-                                                        <h6 class="mb-1">{{ row }} 工具</h6>
-                                                    </td>
-                                                    <td>
+{#                        <div class="col-xl-4 col-md-5">#}
+{#                            <div class="card Recent-Users">#}
+{#                                <div class="card-header">#}
+{#                                    <h5>celery监控状态</h5>#}
+{#                                </div>#}
+{#                                <div class="card-block px-0 py-0">#}
+{#                                    <div class="table-responsive">#}
+{#                                        <table class="table table-hover">#}
+{#                                            <tbody>#}
+{#                                                {% for row in form.celery_result %}#}
+{#                                                <tr class="unread">#}
+{#                                                    <td style="vertical-align: middle !important;text-align: center;">#}
+{#                                                        <h6 class="mb-1">{{ row }} 工具</h6>#}
+{#                                                    </td>#}
+{#                                                    <td>#}
 {#                                                        <h6 class="text-muted"><i class="fas fa-circle text-c-green f-10 m-r-15"></i>空闲:{{form.celery_result[row][0]}}</h6>#}
-                                                        <h6 class="text-muted">可用:{{form.celery_result[row][0]}}</h6>
-                                                    </td>
-                                                    <td>
+{#                                                        <h6 class="text-muted">可用:{{form.celery_result[row][0]}}</h6>#}
+{#                                                    </td>#}
+{#                                                    <td>#}
 {#                                                        <h6 class="text-muted"><i class="fas fa-circle text-c-red f-10 m-r-15"></i>繁忙:{{form.celery_result[row][1]}}</h6>#}
-                                                        <h6 class="text-muted">忙碌:{{form.celery_result[row][1]}}</h6>
-                                                    </td>
-                                                </tr>
-                                                {% endfor %}
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+{#                                                        <h6 class="text-muted">运行:{{form.celery_result[row][1]}}</h6>#}
+{#                                                    </td>#}
+{#                                                </tr>#}
+{#                                                {% endfor %}#}
+{#                                            </tbody>#}
+{#                                        </table>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
                         <!--[ Recent Users ] end-->
 
                         <div class="col-xl-8 col-md-5">
@@ -168,7 +168,7 @@
                                 </div>
                                 <div class="card-block px-4 py-1">
                                     <div class="form-group">
-                                        <textarea style="resize:none; font-size:12px;" class="form-control" id="loginfo" rows="19" disabled>{% for row in form.runlog %}{{ row.log_time }}------------------------------------------------------------------------ {{ row.log_info }}&#13;{% endfor %}</textarea>
+                                        <textarea style="resize:none; font-size:12px;" class="form-control" id="loginfo" rows="21" disabled>{% for row in form.runlog %}{{ row.log_time }} < ------------------------------------------------------------------------------------------------------------------  > {{ row.log_info }}&#13;{% endfor %}</textarea>
                                     </div>
                                 </div>
                                 

@@ -49,16 +49,22 @@
                                                 <label for="exampleInputEmail1">项目名称</label>
                                                 {{ form.target_name(class="form-control col-sm-10") }}
                                             </div>
-                                            <div class="form-group">
-                                                <label for="exampleFormControlTextarea1">项目描述</label>
-                                                {{form.target_description(style="resize:none;", rows="4",class=" col-sm-10 form-control",placeholder="")}}
-                                            </div>
+<!--                                            <div class="form-group">-->
+<!--                                                <label for="exampleFormControlTextarea1">项目描述</label>-->
+<!--                                                {{form.target_description(style="resize:none;", rows="4",class=" col-sm-10 form-control",placeholder="")}}-->
+<!--                                            </div>-->
                                             <br>
                                             <div class="row">
                                             <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label for="exampleFormControlSelect1">扫描周期</label>
                                                     {{form.target_cron_id(class="form-control", placeholder="请选择")}}
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlSelect1">启动周期扫描</label>
+                                                    {{form.target_cron(class="form-control", placeholder="请选择")}}
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
@@ -83,11 +89,11 @@
                                                 <label for="target_domain">主域名资产</label>
                                                 {{form.domain_name(style="resize:none;", rows="4",class_="form-control",placeholder="")}}
                                             </div>
-                                            <div class="form-group">
-                                                <label for="target_subdomain">精准资产(ip，ip段，域名)</label>
-                                                {{form.subdomain_name(style="resize:none;", rows="3",class_="form-control",placeholder="")}}
-{#                                                <small id="scanmethod_port_dfportlist" class="form-text text-muted">精准资产支持ip，ip段，域名</small>#}
-                                            </div>
+<!--                                            <div class="form-group">-->
+<!--                                                <label for="target_subdomain">精准资产(ip，ip段，域名)</label>-->
+<!--                                                {{form.subdomain_name(style="resize:none;", rows="3",class_="form-control",placeholder="")}}-->
+<!--                                                <small id="scanmethod_port_dfportlist" class="form-text text-muted">精准资产支持ip，ip段，域名</small>-->
+<!--                                            </div>-->
                                             
 {#                                            <div class="form-group">#}
 {#                                                <label for="blacklist">黑名单</label>#}

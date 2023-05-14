@@ -5,7 +5,7 @@ import time
 
 class TargetForm(FlaskForm):
     target_name = StringField('目标名', validators=[DataRequired(message='不能为空')])
-    target_description = TextAreaField('目标描述', validators=[DataRequired(message='不能为空')])
+    target_description = TextAreaField('目标描述')
     target_time = StringField('目标修改时间', default=time.strftime('%Y-%m-%d  %H:%M:%S', time.localtime(time.time())))
     target_method = SelectField('扫描模式名')
     target_cron = SelectField('周期监控', choices=[(True, '是'), (False, '否')])

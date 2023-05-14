@@ -340,15 +340,15 @@ SET FOREIGN_KEY_CHECKS = 1;
 
 insert into User value('1','admin','5e59601e941c93866169e1d23d876b7afc741cf69e60de3becb065d8253d5ec490d0811d8b94769a8aa1e6c0fddde853620b63d02b7bfe2eb9cf05e6304149da78288db52267c11d43fcfe9c80b6f6eb90b51172ca150a3bca52b788d11e0bd1','1');
 
-insert into Sysconfig value('1','1049453191@qq.com','dmjaqfsskfsvbfcf','smtp.qq.com','ForcesWang@163.com','1','1','https://username:password@gitee.com/xxxx/xxx.git','10','18','0','0','0');
+insert into Sysconfig value('1','1049453191@qq.com','dmjaqfsskfsvbfcf','smtp.qq.com','ForcesWang@163.com','1','1','https://username:password@gitee.com/xxxx/xxx.git','20','18','0','0','0');
 
 insert into Cronjob value('1','0');
 
 insert into plugins_Icp value('1', '');
 
 INSERT INTO `H`.`Indexnote`(`id`, `index_note`, `index_time`) VALUES (1, '漏洞多多,奖励多多,天天sql注入,月月rce\r\n详细项目地址可见:https://github.com/SiJiDo/H\r\n\r\n搜索语法介绍:\r\n我们可以在站点识别模块使用 target=电信&&title=四川 来获取电信项目中是标题带有四川的资产 \r\n\r\n具体的搜索字段如下，对于所有模块均有\r\ntarget = 项目名\r\nnew = true (新增资产)\r\nstart_time = 资产添加起始时间\r\nend_time = 资产添加终止时间\r\n\r\n子域名模块独有搜索语法\r\nsubdomain = 子域名\r\nip = ip地址\r\n\r\n端口收集模块独有搜索语法\r\nsubdomain = 域名\r\nip = ip地址\r\nport = 端口\r\nserver = 服务\r\n\r\n站点识别模块独有搜索语法\r\nurl = url路径\r\ntitle = 标题\r\nstatus = 响应码\r\finger = 指纹\r\n\r\n目录扫描模块独有搜索语法\r\nurl = url路径\r\ntitle = 标题\r\nstatus = 响应码\r\ntool = 收集工具\r\n\r\n漏洞扫描模块独有搜索语法\r\nurl = url路径\r\nlevel = 漏洞危害等级\r\ninfo = 漏洞信息\r\ntool = 收集工具\r\n', '2021-11-08  15:42:17');
-INSERT INTO `H`.`Scancron`(`id`, `scancron_name`, `scancron_month`, `scancron_week`, `scancron_day`, `scancron_hour`, `scancron_min`, `scancron_time`) VALUES (1, 'example', '*', '*', '1', '0', '0', '0');
+INSERT INTO `H`.`Scancron`(`id`, `scancron_name`, `scancron_month`, `scancron_week`, `scancron_day`, `scancron_hour`, `scancron_min`, `scancron_time`) VALUES (1, 'Everyday', '*', '*', '1', '0', '0', '0');
 INSERT INTO `H`.`Scanmethod`(`id`, `scanmethod_name`, `scanmethod_subfinder`, `scanmethod_amass`, `scanmethod_shuffledns`, `scanmethod_second`, `scanmethod_port`, `scanmethod_port_portlist`, `scanmethod_port_dfportlist`, `scanmethod_httpx`, `scanmethod_ehole`, `scanmethod_screenshot`, `scanmethod_jsfinder`, `scanmethod_dirb`, `scanmethod_dirb_wordlist`, `scanmethod_xray`, `scanmethod_nuclei`, `scanmethod_nuclei_my`, `scanmethod_time`, `scanmethod_fscan`) VALUES (1, 'full', 1, 1, 1, 1, 1, 'all', '', 1, 1, 1, 1, 1, 'top1000', 1, 1, 1, '2021-11-08  15:43:50',1);
 INSERT INTO `H`.`Scanmethod`(`id`, `scanmethod_name`, `scanmethod_subfinder`, `scanmethod_amass`, `scanmethod_shuffledns`, `scanmethod_second`, `scanmethod_port`, `scanmethod_port_portlist`, `scanmethod_port_dfportlist`, `scanmethod_httpx`, `scanmethod_ehole`, `scanmethod_screenshot`, `scanmethod_jsfinder`, `scanmethod_dirb`, `scanmethod_dirb_wordlist`, `scanmethod_xray`, `scanmethod_nuclei`, `scanmethod_nuclei_my`, `scanmethod_time`, `scanmethod_fscan`) VALUES (2, 'normal', 1, 0, 1, 0, 1, 'top100', '', 1, 1, 1, 1, 1, 'top100', 0, 0, 0, '2021-11-08  15:47:53',1);
 
-insert into Runlog value('1', '欢迎使用H资产收集器', '1998-03-31 0:00:00');
+insert into Runlog value('1', '欢迎使用资产巡航扫描系统', '初始化已完成');
