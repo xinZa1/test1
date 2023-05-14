@@ -340,7 +340,7 @@ SET FOREIGN_KEY_CHECKS = 1;
 
 insert into User value('1','admin','5e59601e941c93866169e1d23d876b7afc741cf69e60de3becb065d8253d5ec490d0811d8b94769a8aa1e6c0fddde853620b63d02b7bfe2eb9cf05e6304149da78288db52267c11d43fcfe9c80b6f6eb90b51172ca150a3bca52b788d11e0bd1','1');
 
-insert into Sysconfig value('1','1049453191@qq.com','dmjaqfsskfsvbfcf','smtp.qq.com','ForcesWang@163.com','1','1','https://username:password@gitee.com/xxxx/xxx.git','20','18','0','0','0');
+insert into Sysconfig value('1','1049453191@qq.com','dmjaqfsskfsvbfcf','smtp.qq.com','ForcesWang@163.com','1','1','','50','18','0','0','0');
 
 insert into Cronjob value('1','0');
 

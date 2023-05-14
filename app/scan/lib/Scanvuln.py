@@ -152,6 +152,7 @@ class tool_nuclei(Thread):
         while not queue.empty():
             target = queue.get()
             scan_target = target[1] + '://' + target[2]
+            print('正在扫描：'+scan_target)
             #发送celery
             vuln_scan = task.send_task('nuclei.run', args=(scan_target,daily,github,), queue='nuclei')
             sql = "INSERT INTO Celerytask(celery_target, celery_id) VALUES(%s,%s)"
