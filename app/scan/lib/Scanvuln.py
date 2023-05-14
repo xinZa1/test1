@@ -162,6 +162,7 @@ class tool_nuclei(Thread):
 
             while True:
                 if vuln_scan.successful():
+                    print('nuclei扫描完成！！')
                     try:
                         lock.acquire()
                         save_result(target, target_id, vuln_scan.result, cursor, conn, current_user)

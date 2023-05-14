@@ -133,13 +133,24 @@ strong {
   font-weight: 600;
 }
 
+/*蓝色*/
 .theme-bg {
-  background: linear-gradient(-135deg, #1de9b6 0%, #1dc4e9 100%);
+  /*background: linear-gradient(-135deg, #1de9b6 0%, #1dc4e9 100%);*/
+  background: #204d74;
 }
 
+/*红色*/
 .theme-bg2 {
-  background: linear-gradient(-135deg, #899FD4 0%, #A389D4 100%);
+  /*background: linear-gradient(-135deg, #899FD4 0%, #A389D4 100%);*/
+  background: #FFC0CB;
 }
+
+/*深蓝色*/
+.theme-bg3 {
+  /*background: linear-gradient(-135deg, #899FD4 0%, #A389D4 100%);*/
+  background: #122b40;
+}
+
 
 /* ==========  card css start  =========== */
 .anim-rotate {
@@ -2068,7 +2079,8 @@ p.text-muted {
   width: 264px;
   height: 100vh;
   top: 0;
-  background: #3f4d67;
+  /*background: #3f4d67;*/
+  background: #000000;
   color: #a9b7d0;
 }
 .pcoded-navbar ul {
@@ -8359,7 +8371,8 @@ a.btn-theme.active {
   background: #04a9f5;
 }
 .progress-bar.progress-c-theme {
-  background: linear-gradient(-135deg, #1de9b6 0%, #1dc4e9 100%);
+  /*background: linear-gradient(-135deg, #1de9b6 0%, #1dc4e9 100%);*/
+  background: #204d74;
 }
 .progress-bar.progress-c-theme2 {
   background: linear-gradient(-135deg, #899FD4 0%, #A389D4 100%);
@@ -8368,7 +8381,8 @@ a.btn-theme.active {
   background: #f44236;
 }
 .progress-bar.progress-c-theme {
-  background: linear-gradient(-135deg, #1de9b6 0%, #1dc4e9 100%);
+  /*background: linear-gradient(-135deg, #1de9b6 0%, #1dc4e9 100%);*/
+  background: #204d74;
 }
 .progress-bar.progress-c-theme2 {
   background: linear-gradient(-135deg, #899FD4 0%, #A389D4 100%);
@@ -8377,7 +8391,8 @@ a.btn-theme.active {
   background: #1de9b6;
 }
 .progress-bar.progress-c-theme {
-  background: linear-gradient(-135deg, #1de9b6 0%, #1dc4e9 100%);
+  /*background: linear-gradient(-135deg, #1de9b6 0%, #1dc4e9 100%);*/
+  background: #204d74;
 }
 .progress-bar.progress-c-theme2 {
   background: linear-gradient(-135deg, #899FD4 0%, #A389D4 100%);
@@ -8386,7 +8401,8 @@ a.btn-theme.active {
   background: #f4c22b;
 }
 .progress-bar.progress-c-theme {
-  background: linear-gradient(-135deg, #1de9b6 0%, #1dc4e9 100%);
+  /*background: linear-gradient(-135deg, #1de9b6 0%, #1dc4e9 100%);*/
+  background: #204d74;
 }
 .progress-bar.progress-c-theme2 {
   background: linear-gradient(-135deg, #899FD4 0%, #A389D4 100%);
@@ -8395,7 +8411,8 @@ a.btn-theme.active {
   background: #a389d4;
 }
 .progress-bar.progress-c-theme {
-  background: linear-gradient(-135deg, #1de9b6 0%, #1dc4e9 100%);
+  /*background: linear-gradient(-135deg, #1de9b6 0%, #1dc4e9 100%);*/
+  background: #204d74;
 }
 .progress-bar.progress-c-theme2 {
   background: linear-gradient(-135deg, #899FD4 0%, #A389D4 100%);
