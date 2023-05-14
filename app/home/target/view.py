@@ -3,7 +3,8 @@ from app.home.domain.models import Domain
 from app.home.port.models import Port
 from app.home.http.models import Http
 from app.home.dirb.models import Dirb
-from app.home.vuln.models import Vuln
+from app.home.vuln.models\
+    import Vuln
 from app.home.target.function import ip_addr, saveblacklist, savedomain, savesubdomain, output_excel
 from app.home.target.models import *
 from app.home.utils import *
@@ -13,7 +14,7 @@ from app import db
 from app.home.target.form import *
 from app.home.target.models import Target
 from flask_login import current_user
-from app.schedulertasks.controller import restart_scheduler
+# from app.schedulertasks.controller import restart_scheduler
 import math
 import time
 
@@ -248,10 +249,10 @@ def targetadd(DynamicModel = Target, form = TargetForm):
         #设置domain的其他属性
         savedomain(target.domain_name, target.id, current_user)
         #设置subdomain的其他属性
-        savesubdomain(target.subdomain_name, target.id, current_user)
+        #savesubdomain(target.subdomain_name, target.id, current_user)
 
         #重新配置定时
-        restart_scheduler()
+        #restart_scheduler()
 
         flash("添加成功")
 

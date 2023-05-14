@@ -74,6 +74,7 @@ def scan_vuln(scanmethod_query, target_id, current_user):
 
     #nuclei --多线程
     if(scanmethod_query[14] == True):
+        print("进入nuclei")
 
         #更新nuclei的poc
         vuln_scan = task.send_task('nuclei.run', args=("",False,"",True,), queue='nuclei')
