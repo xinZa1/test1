@@ -1,0 +1,14 @@
+k3.vulnweb.com
+home.vulnweb.com
+ff9e0ea19912924.yl4.us-west-2.eks.vulnweb.com
+sp.vulnweb.com
+iimahd.vulnweb.com
+6-134.ap-northeast-2.compute.vulnweb.com
+testphp.vulnweb.com
+www.testasp.vulnweb.com
+testaspnet.vulnweb.com
+testasp.vulnweb.com
+rest.vulnweb.com
+localhost.vulnweb.com
+rest.vulnweb.com:8080
+testphp.vulnweb.com

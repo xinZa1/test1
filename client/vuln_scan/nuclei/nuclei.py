@@ -14,7 +14,7 @@ if 'DEBUG' in os.environ and os.environ['DEBUG'] == 'False':
     backend = os.environ['BACKEND']
     DEBUG = "False"
 else:
-    DEBUG = "False"
+    DEBUG = "True"
     broker = 'amqp://guest:guest@127.0.0.1:5672/H_broker'
     backend = 'amqp://guest:guest@127.0.0.1:5672/H_backend'
 

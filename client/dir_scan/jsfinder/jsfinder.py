@@ -6,9 +6,11 @@ from time import time
 import json
 
 from process import SubProcessSrc
-from urllib.parse import urlparse
+from urllib.parse import urlparse   #urllib.parse: 用于解析URL
+#在指定网站中查找JavaScript文件，并获取JavaScript文件对应的URL、状态码、标题等信息
 
-FILEPATH = os.path.split(os.path.realpath(__file__))[0]
+
+FILEPATH = os.path.split(os.path.realpath(__file__))[0]     #获取当前运行脚本文件的绝对路径
 
 if 'DEBUG' in os.environ and os.environ['DEBUG'] == 'False':
     broker = os.environ['BROKER']
@@ -37,9 +39,10 @@ def run(target):
         command2 = ['./httpx_mac', '-l', out_file_name, '-follow-host-redirects' , '-json', '-o', out_file_name2]
     else:
         command = ['python3', 'JSFinder.py', '-u', target, '-ou', out_file_name]
+        #获取相关信息
         command2 = ['./httpx', '-l', out_file_name, '-follow-host-redirects' , '-json', '-o', out_file_name2]
     result = []
-
+    #读取命令输出文件，提取JavaScript文件对应的URL、状态码、标题等信息
     result = tool(command, command2, work_dir, out_file_name2, target)
     try:
         os.system('rm -rf {}/{}'.format(work_dir, out_file_name))
